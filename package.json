@@ -1,0 +1,15 @@
+{
+  "name": "mysql",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:fernandocamargo/mysql.git",
+  "author": "Fernando Camargo Del Buono <camargodelbuono@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "concurrently": "^7.2.2"
+  },
+  "scripts": {
+    "postinstall": "concurrently \"cd ./server && npm install\" \"cd ./client && npm install\"",
+    "start": "concurrently \"cd ./server && npm run start\" \"cd ./client && npm run start\""
+  }
+}
