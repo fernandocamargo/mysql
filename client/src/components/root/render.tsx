@@ -5,7 +5,7 @@ import { BrowserRouter as Routing } from 'react-router-dom';
 import { ThemeProvider as Theming } from 'styled-components';
 
 import theme from 'themes/default';
-import { App, Style } from 'components';
+import { App, Clients, Style } from 'components';
 
 import use from './hooks';
 
@@ -16,12 +16,14 @@ export default () => {
     <StrictMode>
       <StateManager store={store}>
         <StatePersistence persistor={persistor} loading="Loading...">
-          <Routing>
-            <Theming theme={theme}>
-              <Style />
-              <App />
-            </Theming>
-          </Routing>
+          <Clients>
+            <Routing>
+              <Theming theme={theme}>
+                <Style />
+                <App />
+              </Theming>
+            </Routing>
+          </Clients>
         </StatePersistence>
       </StateManager>
     </StrictMode>

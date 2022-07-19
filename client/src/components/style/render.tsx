@@ -1,6 +1,5 @@
 import property from 'lodash/property';
 import { createGlobalStyle } from 'styled-components';
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default createGlobalStyle`
   html,
